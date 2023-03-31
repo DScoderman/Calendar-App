@@ -16,7 +16,7 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(keyText, textVal)
 })
 
-
+// code to add the classes (and remove any that are on it as well)
 
 $(".time-block").each(function () {
   console.log($(this))
@@ -24,14 +24,20 @@ $(".time-block").each(function () {
   console.log(currentHour)
   if  (hourTime < currentHour)  {
   $(this).addClass("past");
+  $(this).removeClass("present");
+  $(this).removeClass("future");
 }  else if (hourTime === currentHour)  {
   $(this).addClass("present");
+  $(this).removeClass("future");
+  $(this).removeClass("past");
 }  else {
   $(this).addClass("future");
+  $(this).removeClass("present");
+  $(this).removeClass("past");
   } 
 })
 
-localStorage.getItem()
+localStorage.getItem(keyText, textVal)
 
 // listener for click event
 //containerEl.on("click", ".saveBtn", function(event) {
