@@ -16,7 +16,5 @@ Since there are no packages or other external items you need to download, begin 
 https://dscoderman.github.io/Calendar-App/
 
 
-## Screenshot
 
-![image of the workday calendar, where users can plan out events by the hour.](assets\CSS\Images\screencapture-dscoderman-github-io-Calendar-App-2023-03-30-23_04_27.png)
 
