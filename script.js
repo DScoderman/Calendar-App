@@ -1,11 +1,16 @@
 // setting up variables and consts
-
-var saveBtnEl = $(".saveBtn");
-console.log(saveBtnEl)
 var containerEl = $(".container-lg");
+var currentDayEl= $('#currentDay');
 
-var hourTime =parseInt(dayjs().format("H"))
-console.log(hourTime)
+function displayTime() {
+
+  var getDate = dayjs().format('dddd, MMM DD, [at] hh:mm:ss a');
+  currentDayEl.text(getDate);
+  setInterval(displayTime, 1000);
+};
+
+var currentHour =parseInt(dayjs().format("H"))
+console.log(currentHour)
  
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -20,29 +25,39 @@ $(".saveBtn").on("click", function () {
 
 $(".time-block").each(function () {
   console.log($(this))
-  var currentHour = parseInt($(this).attr('data-time'))
-  console.log(currentHour)
-  if  (hourTime < currentHour)  {
+  var timeBlock = parseInt($(this).attr('data-time'))
+  console.log(timeBlock)
+  if  (timeBlock < currentHour)  {
   $(this).addClass("past");
-  $(this).removeClass("present");
-  $(this).removeClass("future");
-}  else if (hourTime === currentHour)  {
+  // $(this).removeClass("present");
+  // $(this).removeClass("future");
+}  else if (timeBlock === currentHour)  {
   $(this).addClass("present");
-  $(this).removeClass("future");
-  $(this).removeClass("past");
-}  else {
+  // $(this).removeClass("future");
+  // $(this).removeClass("past");
+}  else if (timeBlock > currentHour) {
   $(this).addClass("future");
-  $(this).removeClass("present");
-  $(this).removeClass("past");
+  // $(this).removeClass("present");
+  // $(this).removeClass("past");
   } 
 })
 
-localStorage.getItem(keyText, textVal)
+// code below is to save the info a user inputs at each hour. runs from 9AM  - 5PM, set in military time
+
+$("#hour-9").children(".description").val(localStorage.getItem("hour-9"));
+$("#hour-10").children(".description").val(localStorage.getItem("hour-10")); 
+$("#hour-11").children(".description").val(localStorage.getItem("hour-11"));
+$("#hour-12").children(".description").val(localStorage.getItem("hour-12"));
+$("#hour-13").children(".description").val(localStorage.getItem("hour-13")); 
+$("#hour-14").children(".description").val(localStorage.getItem("hour-14")); 
+$("#hour-15").children(".description").val(localStorage.getItem("hour-14")); 
+$("#hour-16").children(".description").val(localStorage.getItem("hour-16")); 
+$("#hour-17").children(".description").val(localStorage.getItem("hour-17")); 
 
 // listener for click event
-//containerEl.on("click", ".saveBtn", function(event) {
-//console.log(event.target).parent().children().eq();
-//})
+containerEl.on("click", ".saveBtn", function(event) {
+console.log(event.target).parent().children().eq();
+})
 
 
 
@@ -66,7 +81,6 @@ localStorage.getItem(keyText, textVal)
     // TODO: Add code to display the current date in the header of the page.
   // });
 
- 
-  
+  // setup to call function back
 
-  currentTime =dayjs().format("")
+ 
