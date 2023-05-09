@@ -18,6 +18,8 @@ MIT license, so feel free to use it.
 
 https://dscoderman.github.io/Calendar-App/
 
+## Screenshot
 
+[a shot of the calendar app. The hours from 9-10AM are greyed out while the current hour is colored in red. The upcoming hours are in green.](assets\CSS\Images\Calendar APP mid day shot.png)
 
 
