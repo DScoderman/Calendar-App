@@ -20,6 +20,7 @@ https://dscoderman.github.io/Calendar-App/
 
 ## Screenshot
 
-[a shot of the calendar app. The hours from 9-10AM are greyed out while the current hour is colored in red. The upcoming hours are in green.](assets\CSS\Images\Calendar APP mid day shot.png)
+<img width="463" alt="Calendar APP mid day shot" src="https://github.com/DScoderman/Calendar-App/assets/126803084/fe5c3957-aa40-48d6-ad4e-044918fa8aaa">
+
 
 
